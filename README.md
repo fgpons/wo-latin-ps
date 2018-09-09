@@ -15,4 +15,4 @@ Creating your OWN server of Wild Ones (without having too much knowledge) is now
 
 credits to:
 *WO PW
-and WO LATIN 
+and WO LATIN
