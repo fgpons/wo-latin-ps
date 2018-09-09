@@ -42,3 +42,5 @@ class Database{
 
 
 module.exports = Database;
+
+/* Thanks for contribution */
