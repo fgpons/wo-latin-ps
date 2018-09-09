@@ -16,6 +16,7 @@ Creating your OWN server of Wild Ones (without having too much knowledge) is now
 Community in Discord 😄 <br>
 https://discord.gg/b9khNZg
 
+
 credits to:
 *WO PW
 and WO LATIN
