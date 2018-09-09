@@ -1,4 +1,4 @@
-1. turn on "1.exe" (¡wait for it to turn on completely!)
+1. turn on "1.exe" (Â¡wait for it to turn on completely!)
 2. turn on "2 web.bat"
 3. turn on "3 serv.bat"
 
@@ -9,7 +9,6 @@ now go to localhost
 
 Note:
 * If the client freezes by 90%, disable your antivirus. *
-
 
 
 
