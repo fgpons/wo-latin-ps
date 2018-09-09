@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" translate="no" class="notranslate">
+<head>
+<title>
+Wild Ones Latin &raquo; Home
+</title>
+<meta name="google" value="notranslate">
+<link rel="stylesheet" type="text/css" href="css/style.css?noCache=a1486079561"/>
+<link rel='shortcut icon' type='image/x-icon' href='/img/favicon.ico'/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="/js/swfobject.js?x"></script>
+<script src='http://code.jquery.com/jquery-1.10.1.js'></script>
+<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+<link rel="stylesheet" type="text/css" href="auth-des/auth.css?noCache=ny17"/>
+<script type="text/javascript" src="/js/gameAssets.js?x"></script>
+<script type="text/javascript" src="/js/blk.js?x"></script>
+<script type="text/javascript" src="/js/blk_asset.js?x"></script>
+<!--<script type="text/javascript" src="/js/client.js?x"></script>-->
+<script type="text/javascript" src="/js/alerts.js?x"></script>
+<script type="text/javascript" src="/js/events.js?x"></script>
+<link rel="stylesheet" type="text/css" href="submit-bug/style.css?noCache=1">
+<script type="text/javascript" src="submit-bug/actions.js?x"></script>
+<div class="blk" id="blk"><img src="/img/wolabk.png" alt="Disable AB"></div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<input type="image" src="/img/fullscr.png?ver=1" alt="Fullscreen" id="fullscreen" class="fullscreenBtn">
+<input type="image" src="/img/submit-bug.png?ver=1" alt="Submit Bug" id="submit-bug" class="submit-bug" onclick="startBugs()">
+
+<div class="page">
+<div class="header">
+<table class="nav">
+<tr>
+<th class="menuItem">
+<div class="item">
+<a href="/">Home</a>
+</div>
+</th>
+<th class="menuItem">
+<div class="item">
+<a href="http://facebook.com/wildoneslatin" target="_blank">Facebook</a>
+</div>
+</th>
+<th class="menuItem">
+<div class="space"></div>
+</th>
+<th class="menuItem">
+<div class="logo">
+<a href="index.html"><img class="mainLogo" draggable="false" src="/img/logo.png" alt="Wild Ones: Latin"/></a>
+</div>
+</th>
+<th class="menuItem">
+<div class="space"></div>
+</th>
+<th class="menuItem">
+<div class="item">
+<a href="https://www.youtube.com/c/Fakuch?sub_confirmation=1">Forums</a>
+</div>
+</th>
+<th class="menuItem">
+<div class="item">
+<a href="/">Logout</a>
+</div>
+</th>
+</tr>
+</table>
+</div>
+<div class="notice" id="notice"><p class="notice" id="notice">Loading Messages...</p></div> 
+<div class="content">
+<div class="gameContainer" id="gameContainer">
+<div class="gameAuth">
+<div class="authLogo">
+<img src="img/logo.png?1" draggable="false" alt="Wild Ones: Latin">
+</div>
+<p class="version">Wild Ones: Latin v1.10.16 PRIVATE HTML5</p>
+<div class="loginAuth">
+<div class="lgin-top"><p>Login in wol</p></div>
+<form action="/juego" method="POST" id="loginAuthForm">
+<div class="block">
+<label class="loginLabel" for="username">Username:</label>
+<input class="authInp" id="username" type="text" placeholder="WildNuke" name="dname" onkeyup="this.value=NumText(this.value);return limitar(event,this.value,13)" onKeyDown="return limitar(event,this.value,13)"/ required>
+</div>
+<div class="block">
+<label class="loginLabel" for="password">Password:</label>
+<input class="authInp" id="password" type="password" placeholder="*******" name="snum"/ required>
+</div>
+<input id="playBtn" type="submit" class="playBtn" value=""/>
+<input id="joinBtn" type="button" class="joinBtn" value="" onclick="showRegister()"/>
+<div id="loginStatus" class="loginStatus" style="color:#D20813"><br>That email or name already exists.</div>
+</form>
+<div class="lgin-btm"></div>
+</div>
+<div class="joinAuth" id="joinAuth">
+<div class="join-top"><p>Create your Account</p></div>
+<form action="/registered" onsubmit="return Captcha(this)" name="myForm" method="POST" id="joinAuthForm">
+<div class="block">
+<label class="loginLabel" for="username">Username:</label>
+<input class="authInp" id="join-username" type="text" placeholder="WildNuke" name="dname" maxlength="13" onkeyup="this.value=NumText(this.value);return limitar(event,this.value,13)" onKeyDown="return limitar(event,this.value,13)" required>
+</div>
+<div class="block">
+<label class="loginLabel" for="password">Password:</label>
+<input class="authInp" id="join-password" type="password" placeholder="*******" name="snum" required>
+</div>
+<div class="block">
+<label class="loginLabel" for="password2">Confirm:</label>
+<input class="authInp" id="join-password2" name="snum2" type="password" placeholder="*******" required>
+</div>
+<div class="block">
+<label class="loginLabel" for="email">E-Mail:</label>
+<input class="authInp" id="join-email" name="email" type="email" placeholder="wildnuke@gmail.com" required>
+</div>
+<div class="block">
+ <div class="g-recaptcha" data-sitekey="6Lf2Y0gUAAAAAFdMCANq2ovWxSP6VT2nyurhOV5K" required></div>
+</div>
+<input id="backBtn" type="button" class="backBtn" value="" onclick="closeRegister()"/>
+<input id="greenJoinBtn" type="submit" class="greenJoinBtn" value=""/>
+<div id="regStatus" class="regStatus">You're in for the time of your life</div>
+</form>
+<div class="join-btm"></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="bugBox" class="bugBox">
+<div class="bugBoxShadowOne">
+<div class="bugBoxShadowTwo"></div>
+<div class="bugBoxtitle">
+<p>Submit a Bug Report</p>
+<div class="bugBoxClose"><input type="image" src="submit-bug/close.png" alt="Submit Bug" onclick="closeBug()"></div>
+<div class="bugBoxContent">
+<div class="page1">
+<div class="left">
+<h1>Before you submit anything, please check that it isn't already listed as a known bug on the right.</h1>
+<form id="submitBugForm" class="submitBugForm">
+<div class="blockUsername">
+<label class="bugLabel">Username:</label>
+<input class="bugUsr" id="bugUsr" type="text" value="Unknown"/>
+</div>
+<div class="block">
+<label for="bugInp" class="bugLabel">Bug:</label>
+<textarea id="bugInp" class="bugInp" placeholder="Explain the bug here.
+										Maximum 420 characters.
+										Please use English." maxlength="420"></textarea>
+</div>
+<input id="submitBtn" type="submit" class="submitBtn" value=""/>
+<div id="bugsStatus" class="bugsStatus"><p>Please remember to include screenshots when possible.</p></div>
+</form>
+</div>
+<div class="right">
+<div class="bg">
+<div class="bugNav">
+<ul>
+<li id="fixedBugsBtn" onclick="openFixedBugs()">Fixed Bugs</li>
+<li id="knownBugsBtn" onclick="openKnownBugs()">Known Bugs</li>
+</ul>
+</div>
+<div class="pages">
+<div class="p1" id="p1">
+<p id="p1Title">Known Bugs</p>
+<ul id="p1list">
+</ul>
+</div></div></div></div></div>
+<div class="page2">
+ </div></div></div></div></div>
+<center>
+<script type="text/rocketscript">
+    google_ad_client = "ca-pub-"+"21"+"434931"+"5093595"+"9";
+    google_ad_slot = "4085628722";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<script type="text/rocketscript">
+var snowGift = document.getElementById("snowlady");
+snowGift.onclick = function(){
+	console.log("ouch.");
+    window.open('http://localhost/holiday_promo_treat_2016/','_blank', "width=650, height=210, toolbar=no,menubar=no");
+};
+</script>
+ 
+<script src='//pagead2.googlesyndication.com/pagead/show_ads.js'></script>
+</script></center><a href="https://www.youtube.com/c/Fakuch?sub_confirmation=1" target="_blank">
+<div class="footer">
+<p class="foot">Design &copy; 2018 Wild Ones: Latin.</p></a>
+</div>
+<input type="text" id="usr" style="display:none;">
+</div>
+<div id="gifts" class="gifts">
+</div>
+</body>
+<footer>
+</footer>
+<script type="text/javascript" src="/actions.js?x"></script>
+</html>

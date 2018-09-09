@@ -1,0 +1,481 @@
+@font-face{font-family:wildOnes;src:url('wildOnes.ttf');}
+
+@font-face{ 
+	font-family: 'iwo';
+	src: url('iwo.eot');
+	src: url('iwo.eot?#iefix') format('embedded-opentype'),
+	     url('iwo.woff') format('woff'),
+	     url('iwo.ttf') format('truetype'),
+	     url('iwo.svg#webfont') format('svg');
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-touch-callout: none; /* iOS Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+body{
+background-color: #91BFF2;background-image: url(/auth-des/img/bgs/6.png); -webkit-background-size: 100% 100%; /* Safari 3.0 */ -moz-background-size: 100% 100%; /* Gecko 1.9.2 (Firefox 3.6) */ -o-background-size: 100% 100%; /* Opera 9.5 */ background-size: 100% 100%; /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */ -moz-border-image: url(/auth-des/img/bgs/6.png) 0; /* Gecko 1.9.1 (Firefox 3.5) */
+}
+
+#content{
+	margin-top: 10px!important;
+}
+
+.textasd{font-family: 'iwo';font-size: 24px;}
+
+#helpbackground{
+	width: 50%;
+	height: 80%;  
+	margin: 0px auto;
+	background-color: #B7D2F3;
+	background-image: url('/auth-des/img/bgs/5.png');
+	border: 5px solid #B7D2F3; 
+}
+.status{
+    background-image: url('../img/ldr.gif');
+    position: absolute;
+    width: 128px;
+    height: 15px;
+    z-index: 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 87px;
+    left: 45%;
+}
+/* login popup */
+.overlay {
+	z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  transition: opacity 500ms;
+  width: 100%;
+  height: 100%;
+}
+.login{
+	display: block;
+}
+.loginBox{
+	display: block;
+	position: absolute;
+	z-index: 2;
+	width: 400px;
+	height: 275px;
+	background-color: #0A468C;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 6px;
+    border-top: 2px solid #0E69FF;
+    border-bottom: 3px solid #0E69FF;
+	box-shadow: 3px 3px 2px 0px #212121;
+	
+}
+.loginHeader{
+	font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+	font-size: 26px;
+	text-align:  center;
+	margin-top:  6px;
+	padding: 3px;
+	letter-spacing: 1;
+	color: white;
+	overflow: hidden;
+	background-color: #082548;
+}
+.loginMsg {
+    font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    /* margin-top: 6px; */
+    padding: 5px 5px 0px 5px;
+    color: white;
+    letter-spacing: 1;
+}
+/* end login bg*/
+/* login form */
+label {
+    color: #555;
+    display: inline-block;
+    margin-left: 18px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+p a {
+    font-size: 11px;
+    color: #aaa;
+    float: right;
+    margin-top: -13px;
+    margin-right: 20px;
+}
+p a:hover {
+    color: #555;
+}
+input {
+	font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+input[type=text],
+input[type=password],input[type=email] {
+    color: #082647;
+    padding-left: 10px;
+    margin: 10px;
+    width: 380px;
+    height: 35px;
+    font-size:  20px;
+    text-align:  center;
+    border:  none;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+.loginBtn{
+    font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #5D9615;
+    border-radius: 6px;
+    border-top: 2px solid #93D51F;
+    border-bottom: 3px solid #93D51F;
+    box-shadow: 3px 3px 2px 0px #212121;
+    padding: 5px 10px 2px 10px;
+    outline: none;
+    border-left: 0px;
+    border-right: 0px;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.loginBtn:hover{
+    color: #FFCC00;
+}
+.signUpBtn{
+    font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+    font-size: 25px;
+    color: #000000;
+    background-color: #FFB432;
+    border-radius: 6px;
+    border-top: 2px solid #FFDC64;
+    border-bottom: 3px solid #FFDC64;
+    box-shadow: 3px 3px 2px 0px #212121;
+    padding: 5px 10px 2px 10px;
+    outline: none;
+    border-left: 0px;
+    border-right: 0px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.signUpBtn:hover{
+    color: #0A468C;
+}
+.signupRtnMsg, .loginRtnMsg{
+    font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 8px 5px 10px 5px;
+    color: white;
+    letter-spacing: 1;
+}
+/* end login form */
+
+/* register box */
+.signupBox{
+	display: none;
+	position: absolute;
+	z-index: 2;
+	width: 400px;
+	height: 475px;
+	background-color: #0A468C;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 6px;
+    border-top: 2px solid #0E69FF;
+    border-bottom: 3px solid #0E69FF;
+	box-shadow: 3px 3px 2px 0px #212121;
+	
+}
+.g-recaptcha {
+    text-align: center;
+    margin-left: 10px;
+    padding: 5px 0px 5px 36px;
+    width: 344px;
+    background-color: #d3d3d3;
+    border-radius: 4px;
+}
+.signupHeader{
+	font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+	font-size: 26px;
+	text-align:  center;
+	margin-top:  6px;
+	padding: 3px;
+	letter-spacing: 1;
+	color: white;
+	overflow: hidden;
+	background-color: #082548;
+}
+.signupMsg {
+    font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    /* margin-top: 6px; */
+    padding: 8px 5px 0px 5px;
+    color: white;
+    letter-spacing: 1;
+}
+.iWOGame{
+	display: none; 
+	z-index: 1; 
+	position: relative;
+}
+/* end register box */
+
+/* ALERT BOX */
+.showOffline{
+	display: none;
+	position: absolute;
+	z-index: 3;
+	width: 400px;
+	height: 100px;
+	background-color: #0A468C;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 6px;
+    border-top: 2px solid #0E69FF;
+    border-bottom: 3px solid #0E69FF;
+	box-shadow: 3px 3px 2px 0px #212121;
+}
+
+.alertBox{
+	display: none;
+	position: absolute;
+	z-index: 3;
+	width: 400px;
+	height: 200px;
+	background-color: #0A468C;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 6px;
+    border-top: 2px solid #0E69FF;
+    border-bottom: 3px solid #0E69FF;
+	box-shadow: 3px 3px 2px 0px #212121;
+}
+.alertHeader{
+	font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+	font-size: 26px;
+	text-align:  center;
+	margin-top:  6px;
+	letter-spacing: 1;
+	padding: 3px;
+	color: white;
+	overflow: hidden;
+	background-color: #082548;
+}
+.alertMsg {
+    font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    /* margin-top: 6px; */
+    padding: 5px 5px 0px 5px;
+    color: white;
+    letter-spacing: 1;
+}
+.referID{
+	color:#FFCC00;
+	font-size: 23px;
+	font-family: monospace;
+}
+/* END ALERT BOX */
+p{
+	font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+}
+
+/* PETGLOW */
+
+.petGlow{
+  -webkit-filter: drop-shadow(-3px -1px 5px red) drop-shadow(2px 1px 5px red);
+  filter: drop-shadow(-3px -1px 5px red) drop-shadow(2px 1px 5px red);
+}
+.paypalButton{
+	float: right;
+	display: block;
+}
+.donateMoreButton{
+	display: none;
+	float: right;
+}
+.petGlowBox{
+	display: none;
+	position: absolute;
+	z-index: 3;
+	width: 700px;
+	height: 540px;
+	background-color: #0A468C;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 6px;
+    border-top: 2px solid #0E69FF;
+    border-bottom: 3px solid #0E69FF;
+	box-shadow: 3px 3px 2px 0px #212121;
+}
+.petGlowHeader{
+	font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+	font-size: 26px;
+	text-align:  center;
+	margin-top:  6px;
+	letter-spacing: 1;
+	padding: 3px;
+	color: white;
+	overflow: hidden;
+	background-color: #082548;
+}
+.petGlowMsg {
+    font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    /* margin-top: 6px; */
+    padding: 0px 5px 0px 5px;
+    color: white;
+    letter-spacing: 1;
+}
+.petGlowBox .left {
+    width: 300px;
+    float:  left;
+    text-align:  center;
+    /* background-color: #082647; */
+    /* margin: 10px; */
+    /* padding: 18px; */
+    /* border-radius: 29px; */
+}
+.inputAmount p {
+    text-align:  right;
+    clear: both;
+    float:  right;
+    width: 125px;
+    font-size: 23px;
+}
+
+input.currencyBox {
+    /* float:  right; */
+    position: absolute;
+    width:  80px;
+    clear: left;
+    text-align:  left;
+    bottom: -1px;
+    padding: 5px 0px 0px 5px;
+    left: 328px;
+    height: 39px;
+}
+
+p.donation {
+    width: 115px;
+    float: right;
+    position:  absolute;
+    color: #ffffff;
+    bottom: 11px;
+    left: 222px;
+    font-size: 26px;
+}
+.petGlowBox .right {
+    width:  50%;
+    float:  right;
+    text-align:  center;
+    /* background-color: #082647; */
+}
+.petGlowBox .buttons {
+    clear: left;
+    margin-top: 10px;
+}
+p.petGlowName{
+	font-size: 34px;
+	text-align: center;
+	margin: 13px 0px 0px 30px;
+	color: #ffffff;
+}
+.petGlowContainer {
+    background-color: #082647;
+    width: 680px;
+    height: 340px;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding-top: 20px;
+    text-align:  center;
+}
+/* END PETGLOW */
+
+/* nav */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1B4788;
+}
+
+li {
+    float: left;
+    font-family: 'iwo',"Arial Black", Gadget, sans-serif;
+
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #082548;
+}
+li.logo img {
+    width: 160px;
+    padding-top: 4px;
+    position: absolute;
+    right: 45%;
+}
+
+.active {
+    background-color: #082548;
+}
+/* end nav */
+
+.playBtn{position:absolute;margin-top:5px;background-image:url(/img/play-btn.png);}.playBtn:hover{background-position:0px -53px;}.playBtn:active{background-position:0px -105px;}
+.notice{width:740px;height:20px;padding:0;display:block;margin:0px auto;margin-bottom:5px;background-color:#1B4788;border:solid 5px #1B4788;clear:left;}.notice p{padding:0;margin:0px;font-family:wildOnes,Verdana,Geneva,sans-serif;font-size:20;border:1px solid #1B4788;text-align:center;width:740px;height:20px;color:#ffffff;background-color:transparent;letter-spacing:2px;}
+.foot{margin:0;padding:0px 0px 3px 0px;font-family:Verdana,Geneva,sans-serif;font-size:10px;text-align:center;color:#000;}
+ 
+/*Button play, finish register*/
+.play-now	{
+	position:relative;
+	background-image:  url(/img/es/2.png);
+	background-repeat: no-repeat;
+	white-space: nowrap;
+	display: block;
+	width: 247px;
+	height: 80px;
+	margin-left:135px;
+			}
+.play-now a {
+	display: block;
+	display: block;
+	float: left; 
+	text-decoration: none;
+			}
+.play-now a:hover img{visibility:hidden}

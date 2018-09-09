@@ -1,0 +1,26 @@
+Options -Indexes
+ErrorDocument 404 /not-found.php
+ErrorDocument 403 /not-found.php
+ErrorDocument 500 /not-found.php
+
+RewriteEngine on
+RewriteRule ^juego(|/)$ login
+RewriteRule ^holiday_promo_treat_2016(|/)$ holiday_promo_treat_2016.html
+
+
+#Codigo para proteger servidor de ataques ddos
+
+#Esto hará que el atacante se auto-ataque.
+RewriteCond %{QUERY_STRING} ^([0-9]+)$ [NC,OR]
+RewriteCond %{QUERY_STRING} ^(.*)\?([0-9]+)(.*)$ [NC,OR]
+RewriteCond %{QUERY_STRING} ^([0-9]+\.[0-9])(.*)$ [NC,OR]
+RewriteCond %{QUERY_STRING} ^(.*)\?([0-9]+\.[0-9])(.*)$ [NC]
+RewriteRule ^(.*)$ %{HTTP_REFERER} [L]
+
+# Protegerse contra los ataques DOS limitando el tamaño de subida de archivos 
+LimitRequestBody 10240000
+
+
+
+
+#https://www.youtube.com/c/Fakuch?sub_confirmation=1

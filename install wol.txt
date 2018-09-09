@@ -1,0 +1,97 @@
+ ===   Bienvenid@ a la instalación de tu propio servidor de wild ones    ===
+===  Este tutorial va a ser muy fácil y rápido, asi que no te preocupes!  ===
+
+
+1) Crear directorio C:/data/db 
+(osea en tu disco c, crear una carpeta 
+llamada "data" y dentro de la misma crear una llamada "db").
+
+=====================================
+
+2) a): instalar mongodb (community server) 
+   b): instalar node.js
+   
+   https://www.mongodb.com/download-center?jmp=nav#community
+   https://nodejs.org/
+
+=====================================
+
+3) Descargar "wo-latin-ps" y poner la carpeta en el disco c.
+   Me imagino que ya has descargado "wo-latin-ps" por eso estás
+   viendo este tutorial...
+   ¡Mueve toda la carpeta hacia el disco C!
+
+=====================================
+
+4) Movimiento de carpeta/Organización
+
+  Copiar la ruta donde pusiste la carpeta "wo-latin-ps", ejemplo: C:\wo-latin-ps
+
+   *Recuerda que te dije que pongas la carpeta en el disco C, 
+    aun que no es necesario si vas a cambiar de ruta en el momento de la instalación.
+
+=====================================
+
+5) Instalación de datos
+
+== parte 1 (abrir un terminal/cmd/simbolo de sistema) ==
+para abrirlo ve en la busqueda de windows y escribe "cmd".
+aparecerá una ventana color negro .
+
+Luego de abrir un terminal/cmd/simbolo de sistema o como le digas, poner "cd" y luego pegar la ruta donde está la carpeta "wo-latin-ps".
+
+quedaría de esta forma:
+
+cd C:\wo-latin-ps\Web
+
+despues del "cd" poner un espacio!
+
+luego aprieta la tecla ENTER, y poner:
+
+npm install
+
+nuevamente apretar la tecla ENTER y poner:
+
+node app
+
+y apretar la tecla ENTER por último.
+
+ya estaría instalado la web por así decirlo, ahora faltaría lo interno.
+
+
+== parte 2 (abrir otro terminal/cmd/simbolo de sistema) ==
+
+y repetir todo el mismo procedimiento de antes solo que con los códigos de abajo.
+
+cd C:\wo-latin-ps\game
+
+npm install mongodb@^2.2.33
+
+npm install node-uuid
+
+npm install request
+
+npm install jimp
+
+npm install md5
+
+node app
+
+* Listo!, ahora ir a localhost y todo debería funcionar a la perfección. 
+* Para encender tu WO nuevamente ir a la carpeta "encender wo" y abrir el 1, 2 y luego el 3. ==
+* Recuerda abrirlo por órden y esperar que se enciendan uno por uno correctamente o podría dar error ==
+
+
+== Para editar base de datos ==
+* Este paso no es obligatorio, solo es para editar un jugador luego de que se haya registrado..
+Como sus monedas, treats, pets, etc...
+
+Descargar Robo 3T - 1.2 (intentar con la última versión)
+
+https://robomongo.org/download
+
+
+PUEDES SUSCRIBIRTE A MI CANAL: https://www.youtube.com/c/Fakuch?sub_confirmation=1
+PARA VER LAS NUEVAS ACTUALIZACIONES Y CONTACTARTE CONMIGO SI ES QUE TIENES ALGÚN PROBLEMA.
+
+Puedes ver un vídeo para una explicación más detallada: https://youtu.be/YFtHMBbn2MU

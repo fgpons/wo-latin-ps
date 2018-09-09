@@ -1,0 +1,1 @@
+<!-- Checkea si el email o usuario están correctos, concretamente TODO el formulario. -->
