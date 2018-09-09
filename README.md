@@ -13,6 +13,9 @@ Creating your OWN server of Wild Ones (without having too much knowledge) is now
 <p>- <a href="https://www.mongodb.com/download-center?jmp=nav#community">MongoDB</a></p>
 
 
+Community in Discord 😄
+https://discord.gg/b9khNZg
+
 credits to:
 *WO PW
 and WO LATIN
