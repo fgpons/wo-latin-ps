@@ -10,7 +10,6 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 //Si tocas estos códigos el juego podría dejar de funcionar!
 
-
 var fullname = "Wild Ones Latin" //Nombre completo del servidor
 var shortname = "WOL" //Nombre corto del servidor
 
